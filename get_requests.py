@@ -43,13 +43,17 @@ path_url = 'http://api.postcodes.io/postcodes/'
 
 # 3 - build a function that returns a lat of a postcode
 def postcode_lat():
-    ask_postcode = input('What is the postcode you want to find the latitude of')
+    ask_postcode = input('What is the postcode you want to find the latitude of?')
     result = requests.get(path_url + ask_postcode.strip())
     post_code_dictionary = result.json()
     return post_code_dictionary['result']['latitude']
 
 # 4 - build another function that returns the log of a post code
-def postcode
+def postcode_long():
+    ask_postcode = input('What is the postcode you want to find the longitude of?')
+    result = requests.get(path_url + ask_postcode.strip())
+    post_code_dictionary = result.json()
+    return post_code_dictionary['result']['longitude']
 
 
 
