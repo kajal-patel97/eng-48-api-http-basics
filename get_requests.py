@@ -88,6 +88,5 @@ def search_postcode():
         print('Completed')
 
 
-print(search_postcode())
 
 
